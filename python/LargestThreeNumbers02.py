@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Sep 19 22:59:16 2023
-
-@author: kiran
-"""
-
 print('Enter the two numbers')
 num1 = int(input())
 num2 = int(input())
