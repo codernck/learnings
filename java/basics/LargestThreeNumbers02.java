@@ -3,6 +3,7 @@ package basics;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class LargestThreeNumbers02 {
@@ -20,6 +21,7 @@ public class LargestThreeNumbers02 {
 		System.out.println(findLargest04(num1, num2, num3));
 		System.out.println(findLargest05(num1, num2, num3));
 		System.out.println(findLargest06(num1, num2, num3));
+		System.out.println(findLargest07(num1, num2, num3));
 	}
 
 	private static int findLargest01(int num1, int num2, int num3) {
@@ -80,5 +82,18 @@ public class LargestThreeNumbers02 {
 		al.add(num3);
 		
 		return Collections.max(al);
+	}
+	
+	private static int findLargest07(int num1, int num2, int num3) {
+		List<Integer> al = new ArrayList<>();
+		al.add(num1);
+		al.add(num2);
+		al.add(num3);
+		
+		return al
+				.stream()
+				.mapToInt(e -> e)
+				.max()
+				.orElseThrow(NoSuchElementException::new);
 	}
 }
