@@ -14,6 +14,7 @@ public class LargestThreeNumbers02 {
 		int num1 = scn.nextInt();
 		int num2 = scn.nextInt();
 		int num3 = scn.nextInt();
+		scn.close();
 		
 		System.out.println(findLargest01(num1, num2, num3));
 		System.out.println(findLargest02(num1, num2, num3));

@@ -9,6 +9,7 @@ public class LargestTwoNumbers01 {
 		Scanner scn = new Scanner(System.in);
 		int num1 = scn.nextInt();
 		int num2 = scn.nextInt();
+		scn.close();
 		
 		System.out.println(findLargest01(num1, num2));
 		System.out.println(findLargest02(num1, num2));
